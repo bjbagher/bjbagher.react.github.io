@@ -1,6 +1,4 @@
 import NavBar from "../components/NavBar";
-import ReactMarkdown from "react-markdown";
-import { Fragment } from "react";
 
 const posts = [
   {

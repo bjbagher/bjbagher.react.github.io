@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 
 const postMap = [
