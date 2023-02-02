@@ -99,6 +99,7 @@ h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
   text-align: center;
+  width: 80%;
 }
 
 @keyframes typing {
@@ -129,11 +130,6 @@ h1 {
   background-size: 400%;
 }
 
-ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-}
 
 .intro {
   line-height: 1.4;
@@ -150,16 +146,49 @@ main {
   align-items: center;
 }
 
+nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav {
+  width: 25rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.rows li {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-left: 3rem;
+}
+
 section {
   text-align: center;
 }
 
-nav {
-  margin: 3rem;
+.blog {
+  width: inherit;
+  margin: 0 auto;
 }
 
-h1 {
-  /* border: 1px solid red; */
-  width: 80%;
-  /* width: fit-content */
+.blog  h1 {
+  margin-top: 0rem;
+}
+
+.rows {
+  margin: 3rem 1.5rem;
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.rows a {
+  cursor: pointer;
+}
+
+.post_image {
+  width: 100%;
+  margin-top:2rem;
 }
