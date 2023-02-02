@@ -24,7 +24,7 @@ function BlogPost() {
   const post = postMap[+location.pathname.slice(-1)]
   
   useEffect(() => {
-    import(post.mdSrc).then((res) => {
+    import("../blog/first-post.md").then((res) => {
       fetch(res.default)
         .then((response) => response.text())
         .then((text) => setMd(text));
