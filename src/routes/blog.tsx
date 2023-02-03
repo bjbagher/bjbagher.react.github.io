@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import posts from "./data.json"
+import posts from "./data"
 
 function Blog() {
   return (

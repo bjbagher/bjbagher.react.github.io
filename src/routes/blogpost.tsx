@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import { useLocation } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import posts from "./data.json"
+import posts from "./data"
 
 
 
@@ -12,10 +12,9 @@ function BlogPost() {
 
 
   const post = posts[+location.pathname.slice(-1)]
-  const src = post.mdSrc
   
   useEffect(() => {
-    import(src).then((res) => {
+    post.mdSrc().then((res) => {
       fetch(res.default)
         .then((response) => response.text())
         .then((text) => setMd(text));
