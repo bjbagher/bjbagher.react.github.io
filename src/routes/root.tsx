@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar";
 import Avatar from "../components/Avatar";
 
+
 function Root() {
   return (
       <main>
-          <NavBar />
+          <NavBar/>
           <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.webp" />
           <div>
           <h1>

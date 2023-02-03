@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
-import { useLocation } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import posts from "./data"
+import posts from "../data"
 
 
 
 function BlogPost() {
   const [md, setMd] = useState<string>("");
-  let location = useLocation();
+  const { id } = useParams()
 
 
-  const post = posts[+location.pathname.slice(-1)]
+  const post = posts[+id!]
   
   useEffect(() => {
     post.mdSrc().then((res) => {

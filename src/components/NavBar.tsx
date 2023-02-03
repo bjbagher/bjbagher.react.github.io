@@ -1,4 +1,18 @@
-export default function NavBar() {
+import { useContext } from "react";
+import { ThemeContext } from "../provider";
+
+
+
+export default function NavBar() { 
+ const { theme, setTheme, state } = useContext(ThemeContext)
+
+ 
+ const toggleColorScheme = () => {
+     console.log('got', theme, state)
+    const newTheme = theme === 'dark' ? 'light' : 'dark'
+     setTheme(newTheme)
+     document.getElementsByTagName('html')[0].style.setProperty('color-scheme', newTheme)
+ }
   return (
     <header>
       <nav>
@@ -18,6 +32,9 @@ export default function NavBar() {
             <a href="https://github.com/bjbagher" target="_blank">
               GitHub
             </a>
+          </li>
+          <li>
+            <input type="checkbox"  checked={theme === 'dark'} onChange={toggleColorScheme}/>
           </li>
         </ul>
       </nav>

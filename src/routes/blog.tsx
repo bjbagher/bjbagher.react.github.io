@@ -1,5 +1,5 @@
 import NavBar from "../components/NavBar";
-import posts from "./data"
+import posts from "../data"
 
 function Blog() {
   return (
@@ -13,7 +13,7 @@ function Blog() {
           <div className="rows">
             {posts.map((post, idx) => {
               return (
-                <li>
+                <li key={idx}>
                   <div>
                     <time>
                       {new Date(post.date).toLocaleDateString("en-us", {

@@ -180,7 +180,7 @@ section {
 }
 
 .rows {
-  margin: 3rem 1.5rem;
+  margin: 3rem auto;
   text-align: start;
   display: flex;
   flex-direction: column;
