@@ -1,22 +1,14 @@
 import NavBar from "../components/NavBar";
-
-const posts = [
-  {
-    date: "Jan 12, 2023",
-    title: "Run Prettier on Github Actions",
-  },
-  {
-    date: "Jan 8, 2023",
-    title: "Error: getaddrinfo ENOTFOUND localhost",
-  },
-];
+import posts from "./data.json"
 
 function Blog() {
   return (
     <main>
       <NavBar />
       <section className="blog">
-        <h1>Blog</h1>
+        <div className="blog_title">
+           <h1>Blog</h1>
+        </div>
         <ul>
           <div className="rows">
             {posts.map((post, idx) => {

@@ -6,10 +6,12 @@ function Root() {
       <main>
           <NavBar />
           <Avatar altTxt="astronaut cat" imgSrc="/assets/astro_cat.webp" />
+          <div>
           <h1>
             Hi, I'm <span className="text-gradient">Bahram</span>{" "}
             <span className="rotate">👋</span>
           </h1>
+          </div>
           <p className="intro">I'm a developer based in Fort Lauderdale, FL.</p>
           <p className="recruiter">
             Are you a recruiter? 👉{" "}
