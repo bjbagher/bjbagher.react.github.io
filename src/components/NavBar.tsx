@@ -1,14 +1,14 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import { ThemeContext } from "../provider";
 
 
 
 export default function NavBar() { 
- const { theme, setTheme, state } = useContext(ThemeContext)
+ const { theme, setTheme } = useContext(ThemeContext)
 
  
  const toggleColorScheme = () => {
-     console.log('got', theme, state)
     const newTheme = theme === 'dark' ? 'light' : 'dark'
      setTheme(newTheme)
      document.getElementsByTagName('html')[0].style.setProperty('color-scheme', newTheme)
@@ -18,10 +18,10 @@ export default function NavBar() {
       <nav>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <Link to="/blog">Blog</Link>
           </li>
           <li>
             <a href="https://www.linkedin.com/in/bjbagher/" target="_blank">
@@ -34,7 +34,9 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <input type="checkbox"  checked={theme === 'dark'} onChange={toggleColorScheme}/>
+            <div className="switch">
+                <input type="checkbox"  checked={theme === 'dark'} onChange={toggleColorScheme}/>
+            </div>
           </li>
         </ul>
       </nav>

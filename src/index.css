@@ -147,6 +147,7 @@ main {
 nav ul {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 nav {
@@ -200,4 +201,43 @@ section {
   font-size:1.2rem;
   margin: 1rem 0;
   border-bottom: 1px solid black;
+}
+
+input {
+  cursor: pointer;
+  width: 45px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: lightgrey;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  height: 1.25rem;
+  width: 1.25rem;
+  
+  background-color:  #646cff;;
+}
+
+input:checked {
+  background-color: rgb(var(--accent));
+}
+
+input:checked::after {
+  background-color: white;
+  left: 70%;
+}
+
+
+.switch {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }

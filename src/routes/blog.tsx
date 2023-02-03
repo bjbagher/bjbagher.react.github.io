@@ -1,5 +1,6 @@
+import { Link } from "react-router-dom";
 import NavBar from "../components/NavBar";
-import posts from "../data"
+import posts from "../data";
 
 function Blog() {
   return (
@@ -7,7 +8,7 @@ function Blog() {
       <NavBar />
       <section className="blog">
         <div className="blog_title">
-           <h1>Blog</h1>
+          <h1>Blog</h1>
         </div>
         <ul>
           <div className="rows">
@@ -24,7 +25,7 @@ function Blog() {
                     </time>
                   </div>
                   <div>
-                    <a href={"blog/" + idx}>{post.title}</a>
+                    <Link to={`${idx}`}>{post.title}</Link>
                   </div>
                 </li>
               );
