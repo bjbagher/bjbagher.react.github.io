@@ -25,7 +25,9 @@ function BlogPost() {
     <div>
        <NavBar />
       <img className="post_image" src={post.imgSrc} alt={post.altText} />
-      <h2>{post.title}</h2>
+      <div>
+      <h1>{post.title}</h1>
+      </div>
       <div className="post_date">
       <time>
       {new Date(post.date).toLocaleDateString("en-us", {
